@@ -9,7 +9,7 @@ class GPLDemo implements Serializable {
 
     origin.node {
       origin.stage('Initiate') {
-        println 'Hello, World!'
+        origin.sh 'echo Hello, World!'
       }
     }
 
