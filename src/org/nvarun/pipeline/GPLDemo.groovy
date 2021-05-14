@@ -1,13 +1,15 @@
 
 package org.nvarun.pipeline
 
-class GPLDemo {
+class GPLDemo implements Serializable {
 
   GPLDemo() {}
 
-  def execute() {
+  def execute(origin) {
 
-    println 'Hello, World!'
+    origin.node {
+      println 'Hello, World!'
+    }
 
   }
 
