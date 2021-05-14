@@ -8,7 +8,9 @@ class GPLDemo implements Serializable {
   def execute(origin) {
 
     origin.node {
-      println 'Hello, World!'
+      origin.stage('Initiate') {
+        println 'Hello, World!'
+      }
     }
 
   }
