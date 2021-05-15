@@ -16,6 +16,13 @@ class GPLDemo implements Serializable {
           echo Hello, World!
         '''
       }
+
+      origin.stage('Certify Artifacts') {}
+   
+      origin.stage('Package Artifacts') {}
+
+      origin.stage('Publish Artifacts') {}
+
     }
 
   }
