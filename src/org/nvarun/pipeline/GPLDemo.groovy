@@ -1,6 +1,10 @@
 
 package org.nvarun.pipeline
 
+import org.nvarun.pipeline.certify.GPLCertifyDemo
+import org.nvarun.pipeline.builder.GPLBuilderDemo
+import org.nvarun.pipeline.publish.GPLPublishDemo
+
 class GPLDemo implements Serializable {
 
   GPLDemo() {
@@ -17,11 +21,9 @@ class GPLDemo implements Serializable {
         '''
       }
 
-      origin.stage('Certify Artifacts') {}
-   
-      origin.stage('Package Artifacts') {}
-
-      origin.stage('Publish Artifacts') {}
+      new GPLCertifyDemo().execute(origin)
+      new GPLBuilderDemo().execute(origin)
+      new GPLPublishDemo().execute(origin)
 
     }
 
