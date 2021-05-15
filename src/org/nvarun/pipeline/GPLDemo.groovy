@@ -3,13 +3,15 @@ package org.nvarun.pipeline
 
 class GPLDemo implements Serializable {
 
-  GPLDemo() {}
+  GPLDemo() {
+    println 'Hello, World!'
+  }
 
   def execute(origin) {
 
-    node {
-      stage('Initiate') {
-        sh 'echo Hello, World!'
+    origin.node {
+      origin.stage('Initiate') {
+        origin.sh 'echo Hello, World!'
       }
     }
 
